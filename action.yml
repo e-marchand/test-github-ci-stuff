@@ -6,15 +6,33 @@ branding:
   color: 'blue'
 description: 'Run test'
 inputs:
-  user-param:
+  param1:
+    description: 'user parameters'
+    required: false
+  param2:
+    description: 'user parameters'
+    required: false
+  param3:
     description: 'user parameters'
     required: false
 runs:
   using: 'composite'
   steps:
-    - id: run
-      name: 🚀 Run code
+    - id: run1
+      name: 🚀 Run 1
       shell: bash
       run: |
-        echo '${{ inputs.user-param }}'
-        jq -e . <<<'${{ inputs.user-param }}' && echo "ok" || echo "ko"
+        echo '${{ inputs.param1 }}'
+        jq -e . <<<'${{ inputs.param1 }}'
+    - id: run2
+      name: 🚀 Run 2
+      shell: bash
+      run: |
+        echo '${{ inputs.param2 }}'
+        jq -e . <<<'${{ inputs.param2 }}'
+    - id: run3
+      name: 🚀 Run 23
+      shell: bash
+      run: |
+        echo '${{ inputs.param3 }}'
+        jq -e . <<<'${{ inputs.param3 }}'
