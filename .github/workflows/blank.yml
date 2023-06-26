@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           echo Add other actions to build
-          echo "TEST_PARAM=\"${{ github.workspace }}\"" >> $GITHUB_ENV
+          echo "TEST_PARAM=${{ github.workspace }}" >> $GITHUB_ENV
 
       - uses: e-marchand/test-github-ci-stuff@main
         env:
