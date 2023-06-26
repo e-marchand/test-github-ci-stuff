@@ -9,9 +9,6 @@ inputs:
   user-param:
     description: 'user parameters'
     required: false
-  param:
-    description: 'user parameters'
-    required: false
 runs:
   using: 'composite'
   steps:
@@ -20,4 +17,3 @@ runs:
       shell: bash
       run: |
         echo '${{ inputs.user-param }}'
-        echo '${{ inputs.param }}'
