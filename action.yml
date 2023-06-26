@@ -1,0 +1,19 @@
+# action.yml
+name: 'Run tool4d!'
+author: 'Eric Marchand'
+branding:
+  icon: 'terminal'
+  color: 'blue'
+description: 'Run test'
+inputs:
+  user-param:
+    description: 'user parameters'
+    required: false
+runs:
+  using: 'composite'
+  steps:
+    - id: run
+      name: 🚀 Run code
+      shell: bash
+      run: |
+        echo '${{ inputs.user-param }}'
