@@ -28,12 +28,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         shell: bash
-        env:
-          GITHUB_WORKSPACE: ${{ github.workspace }}
         run: |
           echo Add other actions to build
           echo "TEST_PARAM=\"${{ github.workspace }}\"" >> $GITHUB_ENV
 
       - uses: e-marchand/test-github-ci-stuff@main
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
         with:
           user-param: '{"path": "test", "env": "${{ env.TEST_PARAM }}", "github": "${{ github.workspace }}", "githubenv": "${{ env.GITHUB_WORKSPACE }}" }'
