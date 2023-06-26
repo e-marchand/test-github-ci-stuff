@@ -36,4 +36,6 @@ jobs:
         env:
           GITHUB_WORKSPACE: ${{ github.workspace }}
         with:
-          user-param: '{"path": "test", "env": "${{ env.TEST_PARAM }}", "github": "${{ github.workspace }}", "githubenv": "${{ env.GITHUB_WORKSPACE }}" }'
+          param1: '{"path": "test", "env": "${{ env.TEST_PARAM }}" }'
+          param2: '{"path": "test", "github": "${{ github.workspace }}" }'
+          param3: '{"path": "test", "githubenv": "${{ env.GITHUB_WORKSPACE }}" }'
