@@ -17,3 +17,4 @@ runs:
       shell: bash
       run: |
         echo '${{ inputs.user-param }}'
+        jq -e . <<<'${{ inputs.user-param }}' && echo "ok" || echo "ko"
