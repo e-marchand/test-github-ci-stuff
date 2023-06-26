@@ -32,7 +32,7 @@ jobs:
           echo Add other actions to build
           
           var="${{ github.workspace }}"
-          newvar=`echo $var|sed -e 's/\\/\\\\/g'`
+          newvar=$(echo $var|sed -e 's/\\/\\\\/g')
 
           echo "TEST_PARAM=$newvar" >> $GITHUB_ENV
 
