@@ -26,12 +26,14 @@ runs:
         jq -e . <<<'${{ inputs.param1 }}'
     - id: run2
       name: 🚀 Run 2
+      if: always()
       shell: bash
       run: |
         echo '${{ inputs.param2 }}'
         jq -e . <<<'${{ inputs.param2 }}'
     - id: run3
       name: 🚀 Run 23
+      if: always()
       shell: bash
       run: |
         echo '${{ inputs.param3 }}'
