@@ -34,6 +34,6 @@ jobs:
           echo Add other actions to build
           echo "TEST_PARAM=\"${{ github.workspace }}\"" >> $GITHUB_ENV
 
-      - uses: 4d/e-marchand/test-github-ci-stuff@main
+      - uses: e-marchand/test-github-ci-stuff@main
         with:
           user-param: '{"path": "test", "env": "${{ env.TEST_PARAM }}", "github": "${{ github.workspace }}", "githubenv": "${{ env.GITHUB_WORKSPACE }}" }'
