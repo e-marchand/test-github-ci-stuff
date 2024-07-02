@@ -9,7 +9,7 @@
           "informationUri": "https://eslint.org",
           "rules": [
             {
-              "id": "no-unused-vars-t",
+              "id": "no-unused-vars",
               "shortDescription": {
                 "text": "disallow unused varittables"
               },
@@ -32,7 +32,7 @@
         {
           "level": "error",
           "message": {
-            "text": "'x' is assigned a value but never used."
+            "text": "'y' is assigned a value but never used."
           },
           "locations": [
             {
@@ -43,7 +43,7 @@
                 },
                 "region": {
                   "startLine": 1,
-                  "startColumn": 5
+                  "startColumn": 6
                 }
               }
             }
