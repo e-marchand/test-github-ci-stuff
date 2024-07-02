@@ -18,4 +18,4 @@ jobs:
         with:
           name: JEST Tests            # Name of the check run which will be created
           path: junit/TEST-*.xml    # Path to test results
-          reporter: junit-junit        # Format of test results
+          reporter: junit        # Format of test results
