@@ -9,9 +9,9 @@
           "informationUri": "https://eslint.org",
           "rules": [
             {
-              "id": "no-unused-vars",
+              "id": "no-unused-vars-t",
               "shortDescription": {
-                "text": "disallow unused variables"
+                "text": "disallow unused varittables"
               },
               "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
               "properties": {
