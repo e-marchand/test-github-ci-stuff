@@ -20,7 +20,7 @@ jobs:
       - name: download sdks & generator
         run: |
           echo "test"
-          if [[ "$GITHUB_RELEASE_TAG" == *".fat" ]]; then
+          if [[ "$GITHUB_RELEASE_TAG" == *-fat ]]; then
             echo "fat"
            curl -sL https://github.com/4d/ios-sdk/releases/latest/download/ios.zip -o ios.zip
            curl -sL https://github.com/4d/android-sdk/releases/latest/download/android.zip -o android.zip
