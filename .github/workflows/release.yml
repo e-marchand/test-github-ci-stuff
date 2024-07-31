@@ -1,0 +1,27 @@
+name: Release
+on: 
+  release:
+    types: [published]
+jobs:
+  publish:
+    name: Publish
+    runs-on: macos-latest
+    env:
+      GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      GITHUB_RELEASE_TAG: "${{ github.ref_name }}"
+    permissions:
+      contents: write # for asset upload
+    steps:
+      - name: ⬇️ Checkout
+        uses: actions/checkout@v4
+      - name: download sdks & generator
+        run: |
+          mkdir ./Resources/sdk
+          if [[ $my_string == *.fat ]]; then
+           curl -sL https://github.com/4d/ios-sdk/releases/latest/download/ios.zip -o ./Resources/sdk/ios.zip
+           curl -sL https://github.com/4d/android-sdk/releases/latest/download/android.zip -o ./Resources/sdk/android.zip
+          fi
+          curl -sL https://github.com/4d/android-ProjectGenerator/releases/latest/download/androidprojectgenerator.jar -o ./Resources/scripts/androidprojectgenerator.jar
+
+          ls
+    
