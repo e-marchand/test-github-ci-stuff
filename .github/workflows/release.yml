@@ -5,7 +5,7 @@ on:
 jobs:
   publish:
     name: Publish
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       GITHUB_RELEASE_TAG: "${{ github.event.release.tag_name }}"
